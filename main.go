@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-func match(arr []int, valor int, i int) int {
+func match(arr []int, value int, i int) int {
 	cont := 0
 	qtty := len(arr) - 1
 	for j := i; j <= qtty; j++ {
-		if valor == arr[j] {
+		if value == arr[j] {
 			cont++
 		} else {
 			j = qtty
@@ -19,7 +19,7 @@ func main() {
 	count := 0
 	arr := []int{1}
 	aux := []int{}
-	fmt.Println("Agrega la qtty de repeticiones")
+	fmt.Println("Ad quantity for repeat")
 	fmt.Scan(&count)
 	fmt.Println(arr)
 	for i := 0; i < count-1; i++ {
