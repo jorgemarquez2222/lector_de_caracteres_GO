@@ -16,9 +16,9 @@ func match(arr []int, valor int, i int) int {
 }
 
 func main() {
-	var count int = 0
+	count := 0
 	arr := []int{1}
-	var aux []int = nil
+	aux := []int{}
 	fmt.Println("Agrega la qtty de repeticiones")
 	fmt.Scan(&count)
 	fmt.Println(arr)
@@ -29,7 +29,7 @@ func main() {
 			k += timesFound
 		}
 		arr = aux
-		aux = nil
+		aux = []int{}
 		fmt.Println(arr)
 	}
 }
