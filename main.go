@@ -23,13 +23,10 @@ func main() {
 	fmt.Scan(&count)
 	fmt.Println(arr)
 	for i := 0; i < count-1; i++ {
-		k := 0
-		for k <= len(arr)-1 {
-			timesFound := 0
-			timesFound = match(arr, arr[k], k)
+		for k := 0; k <= len(arr)-1; {
+			timesFound := match(arr, arr[k], k)
 			aux = append(aux, timesFound, arr[k])
 			k += timesFound
-			timesFound = 0
 		}
 		arr = aux
 		aux = nil
