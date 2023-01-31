@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-func match(ig []int, valor int, i int) int {
+func match(arr []int, valor int, i int) int {
 	cont := 0
-	cantidad := len(ig) - 1
-	for j := i; j <= cantidad; j++ {
-		if valor == ig[j] {
+	qtty := len(arr) - 1
+	for j := i; j <= qtty; j++ {
+		if valor == arr[j] {
 			cont++
 		} else {
-			j = cantidad
+			j = qtty
 		}
 	}
 	return cont
@@ -19,7 +19,7 @@ func main() {
 	var count int = 0
 	arr := []int{1}
 	var aux []int = nil
-	fmt.Println("Agrega la cantidad de repeticiones")
+	fmt.Println("Agrega la qtty de repeticiones")
 	fmt.Scan(&count)
 	fmt.Println(arr)
 	for i := 0; i < count-1; i++ {
